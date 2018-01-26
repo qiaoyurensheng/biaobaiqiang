@@ -1,0 +1,33 @@
+<include file="Public:header" title='搜索告白'/>
+<div class="wrap">
+			{$none}
+<div class="pop">
+	<div class="block2">
+		<div class="avatar2"><img src="__PUBLIC__/Image/avatar.jpg" alt=""></div>
+		<div class="italk2">
+		<span class="user">蚌院微表白</span><br/>
+		<p><span class="who">@亲们</span>只提供搜索被表白对象哦</p>
+		<div class="date">来自于管理员</div>
+		</div>
+	</div>
+	
+	<volist name='list' id='vo'>
+		<div class="block">
+		<div class="avatar">
+		<img src="__PUBLIC__/Image/biaobai.jpg" alt="">
+	</div>
+		<div class="italk">
+		<span class="user">{$vo.realname}</span><br/>
+		<p><span class="who">@{$vo.towho}</span>{$vo.content}</p>
+		<div class="date">{$vo.lastdate}<a href="__URL__/share/id/{$vo.id}">查看详情</a></div>
+		</div>
+		</div>
+	</volist>
+</div>
+	<div class="page">{$data}</div>
+</div>
+<!-- UYAN HOT COMMENT BEGIN -->
+<div id="uyan_hotcmt_unit"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2129900"></script> <!-- 如果已经过加载此行JS，即可不用重复加载 -->
+<!-- UYAN HOT COMMENT END -->
+<include file="Public:footer"/>

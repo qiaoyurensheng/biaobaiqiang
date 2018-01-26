@@ -1,0 +1,35 @@
+<include file="Public:header" title='蚌院微表白-蚌院表白墙'/>
+<div class="wrap">
+<div class="pop">
+	<div class="block2">
+		<div class="avatar2"><img src="__PUBLIC__/Image/avatar.jpg" alt=""></div>
+		<div class="italk2">
+		<span class="user">蚌院微表白</span><br/>
+		<p><span class="who">@亲爱的小伙伴们</span>快来这里表白吧 ^_^<br/>点击头像可进入评论哦！<br/>（可在<strong>关于我们</strong>中下载app）</p>
+   
+		
+		<script>alert("欢迎来到蚌院表白墙！");</script>
+		</div>
+	</div>
+   
+	<volist name='list' id='vo'>
+		<div class="block">
+		<div class="avatar">
+		<a href="__URL__/share/id/{$vo.id}"><img src="__PUBLIC__/Image/biaobai.jpg" alt=""></a>
+	</div><!--图片修改-->
+		<div class="italk">
+		<span class="user"><a href="__URL__/share/id/{$vo.id}">{$vo.realname}</a></span><br/>
+		<p><span class="who">@{$vo.towho}</span>{$vo.content}</p>
+		<div class="date">{$vo.lastdate}</div>
+	
+		</div>
+		</div>
+	</volist>
+</div>
+	<div class="page">{$data}</div>
+</div>
+<div class="footer">蚌院微表白</div>
+<script type="text/javascript" src="//s.union.360.cn/149938.js" async defer></script>
+</body>
+</html>
+

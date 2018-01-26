@@ -1,0 +1,36 @@
+<include file="Public:header" title='管理首页'/>
+		<script language="javascript">
+    function delcfm() {
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+	</script>
+<div class="share">
+	<table>
+		<thead>
+			<tr>
+				<th>发起者</th>
+				<th>目标者</th>
+				<th>内容</th>
+				<th>时间</th>
+				<th>删除</th>
+				<th>标记</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="list" id="vo">
+			<tr>
+				<td>{$vo.realname}</td>
+				<td>{$vo.towho}</td>
+				<td>{$vo.content}</td>
+				<td>{$vo.lastdate}</td>
+				<td><a href="__URL__/edit/id/{$vo.id}">修改</a></td>
+				<td><a href="__URL__/del/id/{$vo.id}" onclick="delcfm()">删除</a></td>
+			</tr>
+			</volist>
+		</tbody>
+	</table>
+{$data}
+</div>
+<include file="Public:footer"/>
